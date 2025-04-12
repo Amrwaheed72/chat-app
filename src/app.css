@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.fontino {
+    font-family: "Spinnaker", sans-serif;
+}
+
+.no-password-toggle::-ms-reveal,
+.no-password-toggle::-ms-clear,
+.no-password-toggle::-webkit-textfield-decoration-container {
+    display: none !important;
+}

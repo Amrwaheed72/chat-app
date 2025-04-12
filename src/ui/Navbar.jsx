@@ -1,9 +1,5 @@
 const Navbar = () => {
-  return (
-    <div>
-      Navbar
-    </div>
-  )
-}
+  return <div className="w-full bg-accent-content/40 h-12 p-4">Btngan</div>;
+};
 
-export default Navbar
+export default Navbar;

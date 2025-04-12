@@ -1,7 +1,9 @@
+import LoginContent from "../Components/login/LoginContent"
+
 const LoginPage = () => {
   return (
     <div>
-      LoginPage
+      <LoginContent />
     </div>
   )
 }
