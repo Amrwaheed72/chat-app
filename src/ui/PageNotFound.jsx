@@ -7,12 +7,12 @@ const PageNotFound = () => {
       <p className="fontino text-4xl font-bold">
         The page you wanted is not Found 😓
       </p>
-      <p
+      <span
         onClick={() => navigate(-1)}
         className="fontino flex cursor-pointer gap-4 text-4xl font-bold"
       >
         👈<p className="underline"> Go back</p>
-      </p>
+      </span>
     </div>
   );
 };

@@ -93,6 +93,7 @@ const SettingsContent = () => {
                 <div className="border-base-300 bg-base-100 border-t p-4">
                   <div className="flex gap-2">
                     <input
+                    onChange={()=>{}}
                       placeholder="Type a Message"
                       value="This is a Fuckin Preview"
                       className="input input-bordered h-10 flex-1 text-sm focus:outline-none"
