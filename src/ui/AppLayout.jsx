@@ -10,7 +10,7 @@ const AppLayout = () => {
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         {authUser && <Sidebar />}
-        <main className={`flex-1 overflow-y-auto p-4 ${fullWidth ? 'ml-12' : ''}`}>
+        <main className={`flex-1 overflow-y-auto ${fullWidth ? 'ml-12' : ''}`}>
           <Outlet />
         </main>
       </div>

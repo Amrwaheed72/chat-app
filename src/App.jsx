@@ -52,8 +52,8 @@ const App = () => {
                   fontSize: '16px',
                   maxWidth: '500px',
                   padding: '16px 24px',
-                  backgroundColor: '#9db787 ',
-                  color: 'black',
+                  backgroundColor: 'var(--color-base-300)',
+                  color: 'var(--color-base)',
                 },
               }}
             />

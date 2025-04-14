@@ -9,6 +9,11 @@ const ChatAppProvider = ({ children }) => {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
   const [fullWidth, setFullWidth] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [selectedUser, setSelectedUser] = useState(false);
+  const [isUserLoading, setIsUserLoading] = useState(false);
+  const [isMessagesLoading, setIsMessagesLoading] = useState(false);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('chat-theme') || 'dark';
   });
@@ -30,6 +35,16 @@ const ChatAppProvider = ({ children }) => {
         setIsUpdatingProfile,
         theme,
         setTheme,
+        messages,
+        setMessages,
+        users,
+        setUsers,
+        selectedUser,
+        setSelectedUser,
+        isUserLoading,
+        setIsUserLoading,
+        isMessagesLoading,
+        setIsMessagesLoading,
       }}
     >
       {children}
