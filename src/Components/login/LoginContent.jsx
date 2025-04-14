@@ -22,8 +22,8 @@ const LoginContent = () => {
   const onSubmit = (data) => {
     if (data.email === user.email && data.password === user.password) {
       toast.success('Login successful!');
-      setAuthUser(true)
-      navigate('/settings'); 
+      setAuthUser(true);
+      navigate('/');
     } else {
       toast.error('Invalid email or password');
     }

@@ -3,17 +3,16 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './app.css';
-import Navbar from './ui/Navbar';
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
 import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
 import { ChatAppProvider, UseChatAppContext } from './context/chatAppProvider';
-import Sidebar from './ui/Sidebar';
 import AppLayout from './ui/AppLayout';
+import PageNotFound from './ui/PageNotFound';
 const App = () => {
-  const { authUser } = UseChatAppContext();
+  const { authUser, theme } = UseChatAppContext();
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {
@@ -26,26 +25,16 @@ const App = () => {
     <ChatAppProvider>
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
-          <div>
+          <div data-theme={theme} className="relative">
             <Routes>
               <Route element={<AppLayout />}>
                 <Route path="/" element={<HomePage />} />
-                <Route
-                  path="/signup"
-                  element={!authUser ? <SignUpPage /> : <Navigate to="/" />}
-                />
-                <Route
-                  path="/login"
-                  element={!authUser ? <LoginPage /> : <Navigate to="/" />}
-                />
                 <Route path="/settings" element={<SettingsPage />} />
-                <Route
-                  path="/profile"
-                  element={
-                    authUser ? <ProfilePage /> : <Navigate to="/login" />
-                  }
-                />
+                <Route path="/profile" element={<ProfilePage />} />
               </Route>
+              <Route path="/signup" element={<SignUpPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
             <ReactQueryDevtools initialIsOpen={false} />
             <Toaster

@@ -28,22 +28,29 @@ const SignUpContent = () => {
               label="Full Name"
               type="text"
               error={errors?.fullname?.message}
+              register={register}
             />
             <FormRow
               id="email"
               label="Email Address"
               type="email"
               error={errors?.email?.message}
+              register={register}
             />
             <FormRow
               id="password"
               label="Password"
               type="password"
               error={errors?.password?.message}
+              register={register}
             />
             <button className="btn btn-primary w-full">Create account</button>
           </form>
-          <SignUpLoginRouting title="Aleardy have an Account ?" to="/login" navigate="Sign in" />
+          <SignUpLoginRouting
+            title="Aleardy have an Account ?"
+            to="/login"
+            navigate="Sign in"
+          />
         </div>
       </div>
       <SkeletonShape

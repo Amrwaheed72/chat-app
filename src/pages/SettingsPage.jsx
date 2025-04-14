@@ -1,9 +1,11 @@
+import SettingsContent from '../Components/settings/SettingsContent';
+
 const SettingsPage = () => {
   return (
     <div>
-      SettingsPage
+      <SettingsContent />
     </div>
-  )
-}
+  );
+};
 
-export default SettingsPage
+export default SettingsPage;

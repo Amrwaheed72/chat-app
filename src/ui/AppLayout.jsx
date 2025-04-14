@@ -4,13 +4,16 @@ import Sidebar from './Sidebar';
 import { UseChatAppContext } from '../context/chatAppProvider';
 
 const AppLayout = () => {
-  const { authUser } = UseChatAppContext();
+  const { authUser, fullWidth } = UseChatAppContext();
   return (
-    <div>
+    <div className="flex h-screen flex-col overflow-hidden">
       <Navbar />
-      {authUser ? <Sidebar /> : null}
-      <Sidebar />
-      <Outlet />
+      <div className="flex flex-1 overflow-hidden">
+        {authUser && <Sidebar />}
+        <main className={`flex-1 overflow-y-auto p-4 ${fullWidth ? 'ml-12' : ''}`}>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 };
