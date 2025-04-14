@@ -6,7 +6,7 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 
 const FormRow = ({ id, label, type, error, register }) => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const style = 'text-base-content/40 z-10 size-5';
   return (
     <div className="relative">
       <label htmlFor={id} className="label mb-2">
@@ -15,11 +15,11 @@ const FormRow = ({ id, label, type, error, register }) => {
       <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           {id === 'fullName' ? (
-            <FaUser className="text-base-content/40 z-10 size-5" />
+            <FaUser className={`${style}`} />
           ) : id === 'email' ? (
-            <MdEmail className="text-base-content/40 z-10 size-5" />
+            <MdEmail className={`${style}`} />
           ) : (
-            <RiLockPasswordFill className="text-base-content/40 z-10 size-5" />
+            <RiLockPasswordFill className={`${style}`} />
           )}
         </div>
         {id === 'password' && (
@@ -28,9 +28,11 @@ const FormRow = ({ id, label, type, error, register }) => {
             className="absolute inset-y-0 right-0 flex items-center pr-3"
           >
             {showPassword ? (
-              <IoIosEyeOff className="text-base-content/40 z-10 size-5 cursor-pointer" />
+              <IoIosEyeOff
+                className={`${style} cursor-pointer active:scale-95`}
+              />
             ) : (
-              <IoIosEye className="text-base-content/40 z-10 size-5 cursor-pointer" />
+              <IoIosEye className={`${style} cursor-pointer active:scale-95`} />
             )}
           </div>
         )}

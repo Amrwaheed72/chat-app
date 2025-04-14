@@ -7,9 +7,10 @@ import { UseChatAppContext } from '../context/chatAppProvider';
 
 const Sidebar = () => {
   const { fullWidth, setFullWidth } = UseChatAppContext();
-  const smallWidth = 'bg-base-200 h-screen w-12 border-r border-accent-content ';
+  const smallWidth =
+    'bg-base-200 h-screen w-12 border-r border-accent-content ';
   const bigWidth =
-    'bg-base-200 h-screen w-48 absolute top-16 left-0 border-r border-accent-content ';
+    'bg-base-300 z-10 h-screen w-48 absolute top-16 left-0 border-r border-accent-content ';
   return (
     <div className={fullWidth ? bigWidth : smallWidth}>
       <div

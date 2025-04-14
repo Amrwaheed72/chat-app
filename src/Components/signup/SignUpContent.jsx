@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 import FormRow from '../../ui/FormRow';
-import { Link } from 'react-router-dom';
 import SkeletonShape from '../../ui/SkeletonShape';
 import Logo from '../../ui/logo';
 import SignUpLoginRouting from '../../ui/SignUpLoginRouting';
@@ -9,9 +8,7 @@ const SignUpContent = () => {
   const { register, handleSubmit, reset, formState } = useForm();
   const { errors } = formState;
 
-  const onSubmit = (e) => {
-    e.preventDefault;
-  };
+  const onSubmit = () => {};
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="flex items-center justify-center p-6 sm:p-12">
