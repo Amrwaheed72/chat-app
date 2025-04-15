@@ -11,6 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import { ChatAppProvider, UseChatAppContext } from './context/chatAppProvider';
 import AppLayout from './ui/AppLayout';
 import PageNotFound from './ui/PageNotFound';
+import Call from './Components/Calls/Call';
 const App = () => {
   const { authUser, theme } = UseChatAppContext();
   const queryClient = new QueryClient({
@@ -31,6 +32,7 @@ const App = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/calls" element={<Call />} />
               </Route>
               <Route path="/signup" element={<SignUpPage />} />
               <Route path="/login" element={<LoginPage />} />

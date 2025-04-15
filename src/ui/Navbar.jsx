@@ -9,9 +9,10 @@ const Navbar = () => {
   const { authUser, theme, setTheme } = UseChatAppContext();
   const navigate = useNavigate();
   const handleNavigate = () => {
-    if (authUser) {
-      navigate('/');
-    }
+    // if (authUser) {
+    //   navigate('/');
+    // }
+    navigate('/');
   };
 
   return (

@@ -20,7 +20,7 @@ const ProfileContent = () => {
   };
   return (
     <div className="h-screen pt-20">
-      <div className="mx-auto max-w-2xl p-4 py-8">
+      <div className="mx-auto w-full max-w-2xl p-4 py-8">
         <div className="bg-base-300 space-y-8 rounded-xl p-6">
           <div className="text-center">
             <h1 className="fontino text-2xl font-semibold">Profile</h1>

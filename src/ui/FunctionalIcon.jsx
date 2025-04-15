@@ -7,9 +7,10 @@ const FunctionalIcon = ({ icon, title, to, type, name, fun }) => {
 
   const CustomFunction = () => {
     if (type === 'navigate' || type === 'profile') {
-      if (authUser) {
-        navigate(to);
-      }
+      // if (authUser) {
+      //   navigate(to);
+      // }
+      navigate(to);
     }
     if (type === 'toggle') {
       fun;

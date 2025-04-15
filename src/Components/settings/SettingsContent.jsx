@@ -95,7 +95,7 @@ const SettingsContent = () => {
                     <input
                       onChange={() => {}}
                       placeholder="Type a Message"
-                      value="This is a Fuckin Preview"
+                      value="This is a Preview"
                       className="input input-bordered h-10 flex-1 text-sm focus:outline-none"
                       type="text"
                     />
