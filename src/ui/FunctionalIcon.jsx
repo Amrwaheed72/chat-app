@@ -1,8 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { UseChatAppContext } from '../context/chatAppProvider';
 
-const FunctionalIcon = ({ icon, title, to, type, name, fun }) => {
-  const { authUser, fullWidth } = UseChatAppContext();
+const FunctionalIcon = ({ icon, title, to, type, name }) => {
+  // const { authUser, fullWidth } = UseChatAppContext();
   const navigate = useNavigate();
 
   const CustomFunction = () => {

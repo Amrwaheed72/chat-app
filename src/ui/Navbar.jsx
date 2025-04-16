@@ -14,7 +14,7 @@ import { Themes } from '../Components/constants/constants';
 import { SiRetropie } from 'react-icons/si';
 
 const Navbar = () => {
-  const { authUser, theme, setTheme } = UseChatAppContext();
+  const { theme, setTheme } = UseChatAppContext();
   const initialThemeIconState = () => {
     if (theme === 'dark') return <MdOutlineDarkMode size={20} />;
     if (theme === 'forest') return <MdForest size={20} />;
