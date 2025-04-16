@@ -12,14 +12,11 @@ const FunctionalIcon = ({ icon, title, to, type, name, fun }) => {
       // }
       navigate(to);
     }
-    if (type === 'toggle') {
-      fun;
-    }
   };
   return (
     <div
       onClick={CustomFunction}
-      className="flex cursor-pointer items-center justify-center gap-1 active:scale-90"
+      className={`flex cursor-pointer items-center justify-center gap-1${type !== 'toggle' ? 'active:scale-90' : ''}`}
       title={title}
     >
       <div>

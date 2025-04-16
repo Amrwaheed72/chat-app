@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const ProfileContent = () => {
   const [SelectedImage, setSelectedImage] = useState(null);
-  const { isUpdatingProfile, setIsUpdatingProfile } = UseChatAppContext();
+  const { isUpdatingProfile } = UseChatAppContext();
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (!file) return;
